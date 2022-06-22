@@ -1,7 +1,7 @@
 import React from "react";
 /* import './Header.css' */
 import logo from '../../assets/logo-lunabelle.png'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CartWidget from "../Carrito/CartWidget";
 /* import fontHeader from 'https://fonts.googleapis.com/css2?family=Spinnaker&display=swap'; */
 
 
@@ -14,7 +14,8 @@ const Header = () => {
             <div style={styles.marca}>
                 <div style={styles.marca__ancho}>
                     <img style={styles.marca__logo} src={logo} alt="logo"/>
-                    <ShoppingCartIcon sx={{fontSize:40}}  />
+                    <CartWidget>
+                    </CartWidget>
                 </div>
             </div>
             <nav style={styles.sombra}>
@@ -52,6 +53,7 @@ const styles = {
     },
     marca__ancho: {
         width: 1440,
+        padding: '5px 20px 5px 20px',
         marginLeft: 'auto',
         marginRight: 'auto',
         display: 'flex',

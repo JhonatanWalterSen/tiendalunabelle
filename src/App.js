@@ -2,12 +2,21 @@
 import React from "react";
 import './App.css';
 import Header from './Components/Header/Header'
-
+import ItemListContainer from './Components/Body/ItemListContainer'
 
 
 const App = () => {
   return (
-    <Header></Header>
+    <>
+      <Header>
+
+      </Header>
+
+      <ItemListContainer>
+
+      </ItemListContainer>
+    </>
+    
   );
 }
 
