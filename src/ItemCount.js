@@ -4,32 +4,29 @@ import prod from './assets/producto-tinte.png';
 
 export const ItemCount = ({cantidadStock}) =>{
 
-    //Estado 
+    //Estado
     const [contador, setContador] = useState(1);
-    
+
 
 
     const handlerClick = () =>{
-        setContador(contador + 1)
-        if (contador >= cantidadStock) {
-            console.log('No hay '+ contador + 'Solo tenemos' + cantidadStock);
-        }
+        (contador < cantidadStock) && setContador(contador + 1);
     }
 
     const handlerClickRest = () =>{
-        setContador(contador - 1)
-        if (contador >= 0) {
-            console.log('contador 0'); 
-        }
-    } 
-    
+        (contador > 1) && setContador(contador - 1)
+    }
+
+    const onAdd = () =>{
+        alert('Gracias por agregar ' + contador + ' productos')
+    }
 
     return(
         <>
             <div style={styles.card}>
                 <div >
                     <img  style={styles.img} src={prod} alt="producto-1"/>
-                    Precio: S/20 
+                    Precio: S/20
                 </div>
                 <div style={styles.contenedor__contador}>
                     <button style={styles.btn_rest} onClick={handlerClickRest}> - </button>
@@ -37,7 +34,7 @@ export const ItemCount = ({cantidadStock}) =>{
                     <button style={styles.btn_plus} onClick={handlerClick}> + </button>
                 </div>
                 <div style={styles.contenedor__aniadir}>
-                    <a style={styles.aniadir_a} href="http://localhost:3000">Agregar al Carrito</a>
+                    <a style={styles.aniadir_a} href="http://localhost:3000" onClick={onAdd}>Agregar al Carrito</a>
                 </div>
             </div>
         </>

@@ -14,15 +14,18 @@ const App = () => {
 
       </Header>
 
-      <ItemListContainer>
+      <ItemListContainer
+      proximamente='pasando un props : Texto'
+      numero1={10}
+      numero2={20}>
 
       </ItemListContainer>
 
       <ItemCount cantidadStock={stock}>
-      
+
       </ItemCount>
     </>
-    
+
   );
 }
 
