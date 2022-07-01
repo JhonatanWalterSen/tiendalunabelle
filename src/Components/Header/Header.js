@@ -1,8 +1,6 @@
 import React from "react";
-/* import './Header.css' */
 import logo from '../../assets/logo-lunabelle.png'
 import CartWidget from "../Carrito/CartWidget";
-/* import fontHeader from 'https://fonts.googleapis.com/css2?family=Spinnaker&display=swap'; */
 
 
 const Header = () => {
@@ -79,7 +77,7 @@ const styles = {
     },
     categoria__titulo: {
         marginLeft: 25,
-        marginRight: 25, 
+        marginRight: 25,
         textDecoration: 'none',
         outline: 'none',
         fontWeight: 'bold',
