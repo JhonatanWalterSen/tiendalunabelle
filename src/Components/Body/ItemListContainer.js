@@ -1,21 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import apiProductos from "../../data";
 import ItemList from "./ItemLIst";
 
-const productosLunabelle = [
-    {id:2000, nombre:'Uñas',descripcion:'para uso personal' ,precio: 30, stock: 20},
-    {id:2001, nombre:'Tinte',descripcion:'diferentes colores' ,precio: 60, stock: 11},
-    {id:2002, nombre:'Audifonosñas',descripcion:'Rosa / Blanco / Negro' ,precio: 85, stock: 15},
-    {id:2003, nombre:'Secadoras',descripcion:'para uso personal' ,precio: 35, stock: 10},
-]
+const promesa = new Promise((res, rej) =>{
+    setTimeout(() => {
+        res(apiProductos)
+    }, 2000);
+})
 
-const ItemListContainer = ({proximamente,numero1,numero2}) => {
+
+
+const ItemListContainer = () => {
+    const [productosList, setProductosList] = useState([]);
+    const [cargando, setCargando] = useState(false)
+
+    useEffect(() =>{
+        setCargando(true)
+        promesa.then((response)=>{
+            setCargando(false)
+            setProductosList(response)
+        });
+    }, []);
+
+    if (cargando) {
+        return (
+            <>
+                <h1>Cargando...</h1>
+            </>
+        )
+    }
+
     return (
         <>
-            <p>{proximamente} </p>
-            <p>1er Valor Numérico {numero1}</p>
-            <p>1er Valor Numérico {numero2}</p>
-            <p>Resultado {numero1 + numero2}</p>
-            <ItemList apiProductos={productosLunabelle}>
+            <ItemList apiProductos={productosList}>
 
             </ItemList>
         </>

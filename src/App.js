@@ -14,10 +14,7 @@ const App = () => {
 
       </Header>
 
-      <ItemListContainer
-      proximamente='pasando un props : Texto'
-      numero1={10}
-      numero2={20}>
+      <ItemListContainer>
 
       </ItemListContainer>
 
