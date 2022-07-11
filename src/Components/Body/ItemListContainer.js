@@ -24,9 +24,8 @@ const ItemListContainer = () => {
 
     if (cargando) {
         return (
-            <>
-                <h1>Cargando...</h1>
-            </>
+            <div style={styles.loader}>
+            </div>
         )
     }
 
@@ -40,4 +39,23 @@ const ItemListContainer = () => {
 }
 
 export default ItemListContainer
+
+const styles = {
+    loader: {
+        border: '10px solid #f3f3f3',
+        borderTop: '10px solid #3498db',
+        borderRadius: '50%',
+        width: '80px',
+        height: '80px',
+        animation: 'spin 1s linear infinite',
+    },
+    /* keyframes: 'spin' {
+        0% {
+          transform: 'rotate(0deg)',
+        },
+        100% {
+          transform: 'rotate(360deg)',
+        },
+    }, */
+}
 
