@@ -1,6 +1,13 @@
+import pulidora from '../assets/pulidoras.jpg';
+import colgadores from '../assets/colgadores.jpg';
+import audifono from '../assets/audifono-kawai.jpg';
+import secadora from '../assets/secadora.jpg';
+
+
 const productosLunabelle = [
     {
         id:2000,
+        imagen:pulidora,
         nombre:'Uñas',
         descripcion:'para uso personal',
         precio: 30,
@@ -8,6 +15,7 @@ const productosLunabelle = [
     },
     {
         id:2001,
+        imagen:colgadores,
         nombre:'Tinte',
         descripcion:'diferentes colores'
         ,precio: 60,
@@ -15,6 +23,7 @@ const productosLunabelle = [
     },
     {
         id:2002,
+        imagen:audifono,
         nombre:'Audifonos',
         descripcion:'Rosa / Blanco / Negro',
         precio: 85,
@@ -22,6 +31,7 @@ const productosLunabelle = [
     },
     {
         id:2003,
+        imagen:secadora,
         nombre:'Secadoras',
         descripcion:'para uso personal',
         precio: 35,

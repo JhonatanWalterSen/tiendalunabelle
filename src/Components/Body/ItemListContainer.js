@@ -25,7 +25,9 @@ const ItemListContainer = () => {
 
     if (cargando) {
         return (
-            <div className="loader">
+            <div className="content-loader">
+                <div className="loader">
+                </div>
             </div>
         )
     }
