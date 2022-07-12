@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import apiProductos from "../../data";
 import ItemList from "./ItemLIst";
+import '../../App.css';
 
 const promesa = new Promise((res, rej) =>{
     setTimeout(() => {
@@ -24,7 +25,7 @@ const ItemListContainer = () => {
 
     if (cargando) {
         return (
-            <div style={styles.loader}>
+            <div className="loader">
             </div>
         )
     }
@@ -40,7 +41,7 @@ const ItemListContainer = () => {
 
 export default ItemListContainer
 
-const styles = {
+/* const styles = {
     loader: {
         border: '10px solid #f3f3f3',
         borderTop: '10px solid #3498db',
@@ -49,13 +50,6 @@ const styles = {
         height: '80px',
         animation: 'spin 1s linear infinite',
     },
-    /* keyframes: 'spin' {
-        0% {
-          transform: 'rotate(0deg)',
-        },
-        100% {
-          transform: 'rotate(360deg)',
-        },
-    }, */
-}
 
+}
+ */
